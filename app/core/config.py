@@ -4,7 +4,7 @@ containing settings information for the api application.
 """
 # Author: Chris Dare
 # License: 
-
+import logging
 import secrets
 from typing import List
 
