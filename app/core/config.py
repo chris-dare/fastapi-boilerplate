@@ -6,9 +6,9 @@ containing settings information for the api application.
 # License: 
 import logging
 import secrets
-from typing import List
+from typing import List, Union
 
-from pydantic import AnyHttpUrl, BaseSettings
+from pydantic import AnyHttpUrl, BaseSettings, validator
 
 log = logging.getLogger(__name__)
 
