@@ -1,5 +1,5 @@
 """
-The :mod:`app.core.secrity` module implements security functions for user authentication.
+The :mod:`app.core.security` module implements security functions for user authentication.
 """
 # Author: Sebastian Ramirez (Original Author)
 #         Chris Dare
