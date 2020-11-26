@@ -13,3 +13,24 @@ services:
       - SERVER_NAME=${SERVER_NAME?Variable not set}
       - PROJECT_NAME=${PROJECT_NAME?Variable not set}
       - BACKEND_CORS_ORIGINS=${BACKEND_CORS_ORIGINS?Variable not set}
+
+
+  neo4j:
+    image: neo4j
+    restart: unless-stopped
+    ports:
+      - 7474:7474
+      - 7687:7687
+    volumes:
+      - ./conf:/conf
+      - ./data:/data
+      - ./import:/import
+      - ./logs:/logs
+      - ./plugins:/plugins
+    environment: 
+      - NEO4J_AUTH=${NEO4J_USER?Variable not set}/${NEO4J_PASSWORD?Variable not set}
+      # Raise memory limits
+      - NEO4J_dbms_memory_pagecache_size=1G
+      - NEO4J_dbms.memory.heap.initial_size=1G
+      - NEO4J_dbms_memory_heap_max__size=1G
+      
