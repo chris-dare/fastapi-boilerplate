@@ -9,5 +9,7 @@ services:
     ports:
       - 8002:8000
     environment:
-      - ENVIRONMENT=dev
-      - TESTING=0
+      - SERVER_HOST=${SERVER_HOST?Variable not set}
+      - SERVER_NAME=${SERVER_NAME?Variable not set}
+      - PROJECT_NAME=${PROJECT_NAME?Variable not set}
+      - BACKEND_CORS_ORIGINS=${BACKEND_CORS_ORIGINS?Variable not set}
