@@ -7,7 +7,7 @@ services:
     volumes:
       - ./:/app
     ports:
-      - 8002:8000
+      - 8000:8000
     environment:
       - SERVER_HOST=${SERVER_HOST?Variable not set}
       - SERVER_NAME=${SERVER_NAME?Variable not set}
