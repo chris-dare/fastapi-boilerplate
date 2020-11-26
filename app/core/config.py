@@ -3,7 +3,7 @@ The :mod:`app.core.config` module contains dataclasses
 containing settings information for the api application.
 """
 # Author: Chris Dare
-# License: 
+# License:
 import logging
 import os
 import secrets
@@ -12,6 +12,7 @@ from typing import List, Union
 from pydantic import AnyHttpUrl, BaseSettings, validator
 
 log = logging.getLogger(__name__)
+
 
 class Settings(BaseSettings):
     API_V1_STR: str = "/api/v1"
@@ -33,7 +34,6 @@ class Settings(BaseSettings):
         raise ValueError(v)
 
     PROJECT_NAME: str
-
 
     class Config:
         case_sensitive = True

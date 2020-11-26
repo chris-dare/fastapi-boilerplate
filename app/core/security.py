@@ -1,10 +1,11 @@
 """
 The :mod:`app.core.security` module implements security functions for user authentication.
 """
-# Author: Sebastian Ramirez (Original Author)
+
 #         Chris Dare
-# License: 
+# License:
 from datetime import datetime, timedelta
+# Author: Sebastian Ramirez (Original Author)
 from typing import Any, Union
 
 from jose import jwt
