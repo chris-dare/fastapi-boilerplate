@@ -13,7 +13,9 @@ services:
       - SERVER_NAME=${SERVER_NAME?Variable not set}
       - PROJECT_NAME=${PROJECT_NAME?Variable not set}
       - BACKEND_CORS_ORIGINS=${BACKEND_CORS_ORIGINS?Variable not set}
-
+      - NEO4J_USER=${NEO4J_USER?Variable not set}
+      - NEO4J_PASSWORD=${NEO4J_PASSWORD?Variable not set}
+      - NEO4J_HOST=${NEO4J_HOST?Variable not set}
 
   neo4j:
     image: neo4j
