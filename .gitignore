@@ -5,3 +5,8 @@ __pycache__
 app.egg-info
 docker-stack.yml
 
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
