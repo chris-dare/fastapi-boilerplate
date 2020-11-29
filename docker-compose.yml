@@ -3,11 +3,11 @@ version: "3.3"
 services:
   web:
     build: ./
-    command: uvicorn app.main:app --reload --workers 1 --host 0.0.0.0 --port 8000
+    command: uvicorn app.main:app --reload --workers 1 --host 0.0.0.0 --port 80
     volumes:
       - ./:/app
     ports:
-      - 8000:8000
+      - 80:80
     environment:
       - SERVER_HOST=${SERVER_HOST?Variable not set}
       - SERVER_NAME=${SERVER_NAME?Variable not set}
