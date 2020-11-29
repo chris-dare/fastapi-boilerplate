@@ -30,3 +30,5 @@ RUN bash -c "if [ $INSTALL_DEV == 'true' ] ; then poetry install --no-root ; els
 # add app
 COPY ./ /app
 ENV PYTHONPATH=/app
+
+EXPOSE 80
