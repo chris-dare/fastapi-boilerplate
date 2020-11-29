@@ -1,5 +1,7 @@
 # pull official base image
-FROM python:3.8.3-slim-buster
+FROM tiangolo/uvicorn-gunicorn-fastapi:python3.7
+
+COPY ./app /app
 
 # set working directory
 WORKDIR /app/
